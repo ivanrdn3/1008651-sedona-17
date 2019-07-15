@@ -34,33 +34,49 @@
     <main class="page-main">
       <div class="page-main__wrapper">
         <h2 class="visually-hidden">Фотографии и видео городка Седона</h2>
-        <ul class="page-main__list list-foto">
-          <li class="list-foto__item">
-            <img src="http://placehold.it/280x280" width="280" height="280" alt="Фотография Неродные просторы">
-            <h2 class="list-foto__name">Неродные просторы</h2>
-            <cite class="list-foto__autor">Автор фото: Борис</cite>
+        <ul class="page-main__list list-photo">
+          <li class="list-photo__item">
+            <a href="#" class="list-photo__link"><img src="http://placehold.it/280x280" width="280" height="280" alt="Фотография Неродные просторы"></a>
+            <h2 class="list-photo__name">Неродные просторы</h2>
+            <cite class="list-photo__autor">Автор фото: Борис</cite>
+            <button class="list-photo__button button-icon"><span class="visually-hidden">Нравится!</span></button>
+            <span class="list-photo__like">1350</span>
           </li>
-          <li class="list-foto__item">
-            <img src="http://placehold.it/280x280" width="280" height="280" alt="Фотография Местная растительность">
-            <h2 class="list-foto__name">Местная растительность</h2>
-            <cite class="list-foto__autor">Автор фото: Сергей</cite>
+          <li class="list-photo__item">
+            <a href="#" class="list-photo__link"><img src="http://placehold.it/280x280" width="280" height="280" alt="Фотография Местная растительность"></a>
+            <h2 class="list-photo__name">Местная растительность</h2>
+            <cite class="list-photo__autor">Автор фото: Сергей</cite>
+            <button class="list-photo__button button-icon"><span class="visually-hidden">Нравится!</span></button>
+            <span class="list-photo__like">143</span>
           </li>
-          <li class="list-foto__item">
-            <img src="http://placehold.it/280x280" width="280" height="280" alt="Фотография Дорога на север">
-            <h2 class="list-foto__name">Дорога на север</h2>
-            <cite class="list-foto__autor">Автор фото: Петр</cite>
+          <li class="list-photo__item">
+            <a href="#" class="list-photo__link"><img src="http://placehold.it/280x280" width="280" height="280" alt="Фотография Дорога на север"></a>
+            <h2 class="list-photo__name">Дорога на север</h2>
+            <cite class="list-photo__autor">Автор фото: Петр</cite>
+            <button class="list-photo__button button-icon"><span class="visually-hidden">Нравится!</span></button>
+            <span class="list-photo__like">96</span>
           </li>
-          <li class="list-foto__item">
-            <img src="http://placehold.it/280x280" width="280" height="280" alt="Фотография Мост дьявола">
-            <h2 class="list-foto__name">Мост дьявола</h2>
-            <cite class="list-foto__autor">Автор фото: Антон</cite>
+          <li class="list-photo__item">
+            <a href="#" class="list-photo__link"><img src="http://placehold.it/280x280" width="280" height="280" alt="Фотография Мост дьявола"></a>
+            <h2 class="list-photo__name">Мост дьявола</h2>
+            <cite class="list-photo__autor">Автор фото: Антон</cite>
+            <button class="list-photo__button button-icon"><span class="visually-hidden">Нравится!</span></button>
+            <span class="list-photo__like">254</span>
           </li>
         </ul>
         <div class="video-content">
           <h2 class="visually-hidden">Видеопрезентация городка Седона</h2>
           <span class="video-content__headline">Все еще сомневаетесь?</span>
           <p class="video-content__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-          <video src="#" width="321" height="201" controls="controls" poster="img/video-mobile.jpg"></video>
+          <div class="video-content_box">
+            <img class="video-content__img" src="img/video-mobile.jpg" width="321" height="201" alt="Видео зависло">
+            <div class="video-content__controls">
+              <button class="video-content__repeat video-content__repeat--icon"></button>
+              <div class="video-content__line video-content__line--icon"></div>
+              <button class="video-content__subtitles video-content__subtitles--icon"></button>
+              <button class="video-content__fullscreen video-content__fullscreen--icon"></button>
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -79,7 +95,7 @@
             <a href="#" class="social__link social__link--youtube"><span class="visually-hidden">Youtube</span></a>
           </li>
         </ul>
-        <p class="page-footer__copyright copyright--link">Разработано</p>
+        <p class="page-footer__copyright page-footer__copyright--link">Разработано</p>
       </div>
     </footer>
   </body>
