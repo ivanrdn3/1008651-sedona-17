@@ -1,0 +1,166 @@
+.form-review {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.form-review__fieldset {
+  display: block;
+  position: relative;
+
+  margin: 0;
+  margin-top: 39px;
+  padding: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  border: none;
+}
+
+.form-review__legend,
+.form-review__headline {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
+
+  text-transform: uppercase;
+  text-align: center;
+
+  margin: 0;
+  margin-bottom: 21px;
+}
+
+.form-review__fieldset--name::before,
+.form-review__fieldset--information::before,
+.form-review__fieldset--assessments::before,
+.form-review__fieldset--attractions::before,
+.form-review__fieldset--emotions::before {
+  content: "";
+
+  position: absolute;
+  width: 320px;
+  height: 1px;
+  top: -18px;
+  left: 0;
+
+  background-color: #e5e5e5;
+}
+
+.form-review__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.form-review__label {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 26px;
+  color: #333333;
+
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.form-review__input {
+  padding-left: 23px;
+
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
+
+  color: #000000;
+}
+
+.form-review__input::placeholder {
+  color: #000000;
+}
+
+.form-review__input--name {
+  width: 230px;
+  height: 58px;
+
+  margin-left: 9px;
+}
+
+.form-review__input--surname {
+  width: 192px;
+  height: 58px;
+
+  margin-left: 11px;
+}
+
+.form-review__input--patronymic {
+  width: 194px;
+  height: 58px;
+
+  margin-left: 8px;
+}
+
+.form-review__item--name,
+.form-review__item--surname {
+  margin-bottom: 20px;
+}
+
+.form-review__input--telephon,
+.form-review__input--email {
+  width: 280px;
+  height: 58px;
+}
+
+.form-review__input--telephon {
+  margin-bottom: 20px;
+}
+
+.form-review__item--radio,
+.form-review__item--checkbox {
+  padding-top: 19px;
+  padding-bottom: 19px;
+  padding-left: 79px;
+}
+
+.form-review__label--assessment,
+.form-review__label--attraction {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: unset;
+  color: #000000;
+}
+
+/* скрытие инпут радио .form-review__input--radio {
+  display: none;
+} */
+
+/* скрытие инпут чекбокса .form-review__input--checkbox {
+  display: none;
+} */
+
+.form-review__textarea {
+  width: 279px;
+  min-height: 160px;
+
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
+
+  border-color: #f2f2f2;
+  background-color: #f2f2f2;
+
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 18px;
+  margin-bottom: 51px;
+}
+
+.form-review__textarea::placeholder {
+  color: #000000;
+}
+
+.form-review__button {
+  width: 280px;
+
+  text-transform: uppercase;
+
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
