@@ -1,70 +1,13 @@
-@font-face {
-  font-family: "PT Sans", "Arial", sans-serif;
-  src: url("/source/fonts/ptsansbold.woff");
-  src: url("/source/fonts/ptsansbold.woff2");
-  font-weight: bold;
-  font-style: normal;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-
-  font-family: "PT Sans", "Arial", sans-serif;
-
-  background-color: #ffffff;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-
-  list-style-type: none;
-}
-
-.visually-hidden {
-  display: none;
-}
-
-.page-main__wrapper {
-  width: 320px;
-  padding: 0 0;
-  margin: 0 auto;
-}
-
-.button {
-  display: block;
-
-  font-size: 21px;
-  font-weight: bold;
-  line-height: 26px;
-  text-align: center;
-  color: #ffffff;
-
-  background-color: #81b3d2;
-
-  border: none;
-}
-
-@import "../less/blocks/page-header.less";
-@import "../less/blocks/list-advantage.less";
-@import "../less/blocks/hostels.less";
-@import "../less/blocks/page-footer.less";
-@import "../less/blocks/list-photo.less";
-@import "../less/blocks/video-content.less";
-@import "../less/blocks/form.less";
-@import "../less/blocks/pop-up.less";
+@import "blocks/normalize.less";
+@import "blocks/base.less";
+@import "blocks/page-header.less";
+@import "blocks/page-main.less";
+@import "blocks/list-advantage.less";
+@import "blocks/service-list.less";
+@import "blocks/hostel.less";
+@import "blocks/list-photo.less";
+@import "blocks/video-content.less";
+@import "blocks/form-review.less";
+@import "blocks/social.less";
+@import "blocks/page-footer.less";
+@import "blocks/pop-up.less";
