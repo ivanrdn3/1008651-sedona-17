@@ -50,6 +50,11 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .form-review__label {
@@ -163,4 +168,12 @@
 
   padding-top: 16px;
   padding-bottom: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .form-review {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }

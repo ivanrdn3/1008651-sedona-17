@@ -1,3 +1,10 @@
+.service-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
 .list-advantage__service {
   padding-top: 33px;
 }
@@ -41,4 +48,35 @@
 
 .list-advantage__paragraph--color {
   color: #333333;
+}
+
+@media (min-width: @tablet-width) {
+  .service-list {
+    display: flex;
+  }
+
+  .service-list__item {
+    width: 33.33%;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 45px;
+    margin-bottom: 60px;
+  }
+
+  .service-list__headline {
+    font-size: 21px;
+  }
+
+  .service-list__headline,
+  .service-list__paragraph {
+    padding: 0;
+
+    text-align: center;
+  }
+
+  .list-advantage__service {
+    padding-top: 160px;
+  }
 }

@@ -1,5 +1,18 @@
 .page-main__wrapper {
-  width: 320px;
+  min-width: 320px;
   padding: 0 0;
   margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main__wrapper {
+    min-width: 768px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .page-main__wrapper {
+    width: 1200px;
+  }
 }

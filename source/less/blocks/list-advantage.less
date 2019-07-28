@@ -1,3 +1,10 @@
+.list-advantage {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
 .list-advantage__background {
   background-color: #81b3d2;
 
@@ -10,13 +17,11 @@
 .list-advantage__item--backgorund {
   background-color: #eeeeee;
 
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding: 25px;
 }
 
 .list-advantage__headline {
   margin: 0;
-  padding: 0 25px;
 
   font-size: 18px;
   line-height: 26px;
@@ -28,7 +33,6 @@
 
 .list-advantage__paragraph {
   margin: 0;
-  padding: 0 25px;
 
   font-size: 14px;
   line-height: 21px;
@@ -36,4 +40,47 @@
 
   text-align: center;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .list-advantage {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .list-advantage__item {
+    display: flex;
+    width: 100%;
+  }
+
+  .list-advantage__background {
+    width: 33.33%;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .list-advantage__item--backgorund {
+    width: 33.33%;
+
+    flex-direction: column;
+
+    padding: 45px 40px;
+  }
+
+  .list-advantage__headline {
+    font-size: 21px;
+  }
+
+  .service-list__item--food {
+    order: 1;
+  }
+
+  .service-list__item--present {
+    order: 2;
+  }
+
+  .list-advantage__background--order {
+    order: 1;
+  }
 }

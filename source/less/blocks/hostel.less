@@ -1,5 +1,7 @@
 .hostel {
-  margin: 0;
+  width: 320px;
+
+  margin: 0 auto;
   padding-right: 25px;
   padding-left: 25px;
   padding-top: 28px;
@@ -32,4 +34,15 @@
 .hostel__button {
   padding-top: 12px;
   padding-bottom: 17px;
+}
+
+@media (min-width: @tablet-width) {
+  .hostel__headline {
+    font-size: 30px;
+  }
+
+  .hostel {
+    width: 510px;
+    margin: 0 auto;
+  }
 }

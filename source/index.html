@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Седона</title>
   </head>
@@ -9,17 +10,17 @@
     <header class="page-header">
       <div class="page-header__wrapper">
         <nav class="page-header__nav">
-          <a><img class="page-header__logo" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона"></a>
           <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="page-header__list">
-            <li><a class="page-header__item page-header__item--top">Главная</a></li>
-            <li><a class="page-header__item" href="photo.html">Фото и видео</a></li>
-            <li><a class="page-header__item" href="form.html">Форма отзыва</a></li>
-            <li><a class="page-header__item page-header__item--bottom" href="https://htmlacademy.ru/">Html Academy</a></li>
+            <li class="page-header__item"><a class="page-header__link page-header__link--top">Главная</a></li>
+            <li class="page-header__item"><a class="page-header__link" href="photo.html">Фото и видео</a></li>
+            <li class="page-header__item"><a class="page-header__link" href="form.html">Форма отзыва</a></li>
+            <li class="page-header__item"><a class="page-header__link page-header__link--bottom" href="https://htmlacademy.ru/">Html Academy</a></li>
+            <li class="page-header__item page-header__item--logo"><a><img class="page-header__logo" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона"></a></li>
           </ul>
         </nav>
         <div class="page-header__intro">
-          <img src="img/bg-back-mobile@1x.jpg" class="page-header__image" width="768" height="389" alt="Главная фотография сайта Седона">
+          <div class="page-header__background"></div>
           <h1 class="page-header__headline">СЕДОНА — небольшой городок в Аризоне, заслуживающий большего!</h1>
           <p class="page-header__paragraph">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </div>
@@ -36,7 +37,7 @@
               <p class="list-advantage__paragraph">— №1 —</p>
               <p class="list-advantage__paragraph">Седона не аттракцион для туристов, там течет своя жизнь</p>
             </div>
-            <img src="img/main-city-mobile@1x.jpg" width="320" height="260" alt="Фотография городка  Седона">
+            <img class="list-advantage__image" src="img/main-city-mobile@1x.jpg" width="320" height="260" alt="Фотография городка  Седона">
           </li>
           <li class="list-advantage__item">
             <h3 class="visually-hidden">Список услуг</h3>
@@ -56,7 +57,7 @@
             </ul>
           </li>
           <li class="list-advantage__item">
-            <div class="list-advantage__background">
+            <div class="list-advantage__background list-advantage__background--order">
               <h2 class="list-advantage__headline">Там есть мост дьявола</h2>
               <p class="list-advantage__paragraph">— №2 —</p>
               <p class="list-advantage__paragraph">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
@@ -93,19 +94,25 @@
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <span class="page-footer__tag">#visitSEDONA</span>
-        <ul class="page-footer__socials social">
-          <li class="social__item">
-            <a href="#" class="social__link social__link--twitter"><span class="visually-hidden">Twitter</span></a>
+        <ul class="page-footer__list">
+          <li class="page-footer__item"><span class="page-footer__tag">#visitSEDONA</span></li>
+          <li class="page-footer__item">
+            <ul class="page-footer__socials social">
+              <li class="social__item">
+                <a href="#" class="social__link social__link--twitter"><span class="visually-hidden">Twitter</span></a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link social__link--facebook"><span class="visually-hidden">Facebook</span></a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link social__link--youtube"><span class="visually-hidden">Youtube</span></a>
+              </li>
+            </ul>
           </li>
-          <li class="social__item">
-            <a href="#" class="social__link social__link--facebook"><span class="visually-hidden">Facebook</span></a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link social__link--youtube"><span class="visually-hidden">Youtube</span></a>
+          <li class="page-footer__item">
+            <span class="page-footer__copyright">Разработано</span><a class="page-footer__link page-footer__link--icon" href="https://htmlacademy.ru/intensive/adaptive"></a>
           </li>
         </ul>
-        <p class="page-footer__paragraph"><span class="page-footer__copyright">Разработано</span><a class="page-footer__link page-footer__link--icon" href="https://htmlacademy.ru/intensive/adaptive"></a></p>
       </div>
     </footer>
   </body>
