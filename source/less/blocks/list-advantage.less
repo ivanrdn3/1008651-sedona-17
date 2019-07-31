@@ -1,20 +1,28 @@
-.list-advantage__background {
-  background-color: #81b3d2;
+.list-advantage {
+  margin: 0;
+  padding: 0;
 
-  padding-top: 56px;
-  padding-bottom: 39px;
+  list-style: none;
 }
 
-.list-advantage__item--backgorund {
+.list-advantage__wrapper {
+  padding: 20px 45px;
+
+  color: #ffffff;
+}
+
+.list-advantage__item--color {
+  background-color: #81b3d2;
+}
+
+.list-advantage__item--background {
   background-color: #eeeeee;
 
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding: 25px;
 }
 
 .list-advantage__headline {
   margin: 0;
-  padding: 0 25px;
 
   font-size: 18px;
   line-height: 26px;
@@ -26,7 +34,6 @@
 
 .list-advantage__paragraph {
   margin: 0;
-  padding: 0 25px;
 
   font-size: 14px;
   line-height: 21px;
@@ -34,4 +41,114 @@
 
   text-align: center;
   text-transform: uppercase;
+}
+
+.list-advantage__paragraph--margin {
+  margin: 10px 0;
+}
+
+.list-advantage__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-advantage__item--border {
+  position: relative;
+}
+
+.list-advantage__item--border::before {
+  position: absolute;
+  top: 0;
+
+  content: "";
+
+  width: 280px;
+  height: 1px;
+
+  background-color: #d6d6d6;
+}
+
+.list-advantage__item--border::after {
+  position: absolute;
+  bottom: 0;
+
+  content: "";
+
+  width: 280px;
+  height: 1px;
+
+  background-color: #d6d6d6;
+}
+
+.list-advantage__image {
+  vertical-align: bottom;
+}
+
+@media (min-width: @tablet-width) {
+  .list-advantage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .list-advantage__item {
+    width: 100%;
+    height: 256px;
+
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .list-advantage__wrapper {
+    width: 33%;
+  }
+
+  .list-advantage__box {
+    width: 67%;
+  }
+
+  .list-advantage__headline {
+    font-size: 21px;
+  }
+
+  .service-list__item--food {
+    order: 1;
+  }
+
+  .service-list__item--present {
+    order: 2;
+  }
+
+  .list-advantage__wrapper--order {
+    order: 1;
+
+    padding: 20px 50px;
+  }
+
+  .list-advantage__item--background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 33.33%;
+
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .list-advantage__item--border::before,
+  .list-advantage__item--border::after {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .list-advantage__wrapper {
+    padding: 20px 65px;
+  }
+
+  .list-advantage__wrapper--order {
+    padding: 20px 90px;
+  }
 }

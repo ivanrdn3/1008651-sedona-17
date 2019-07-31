@@ -1,11 +1,16 @@
 .form-review {
+  width: 320px;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  margin: 0 auto;
 }
 
 .form-review__fieldset {
-  display: block;
+  display: flex;
+
   position: relative;
 
   margin: 0;
@@ -17,8 +22,7 @@
   border: none;
 }
 
-.form-review__legend,
-.form-review__headline {
+.form-review__legend {
   font-size: 18px;
   font-weight: bold;
   line-height: 26px;
@@ -28,6 +32,8 @@
 
   margin: 0;
   margin-bottom: 21px;
+
+  position: relative;
 }
 
 .form-review__fieldset--name::before,
@@ -50,6 +56,11 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .form-review__label {
@@ -70,6 +81,9 @@
   line-height: 26px;
 
   color: #000000;
+
+  background-color: #f2f2f2;
+  border: none;
 }
 
 .form-review__input::placeholder {
@@ -114,8 +128,8 @@
 
 .form-review__item--radio,
 .form-review__item--checkbox {
-  padding-top: 19px;
-  padding-bottom: 19px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   padding-left: 79px;
 }
 
@@ -127,13 +141,13 @@
   color: #000000;
 }
 
-/* скрытие инпут радио .form-review__input--radio {
+.form-review__input--radio {
   display: none;
-} */
+}
 
-/* скрытие инпут чекбокса .form-review__input--checkbox {
+.form-review__input--checkbox {
   display: none;
-} */
+}
 
 .form-review__textarea {
   width: 279px;
@@ -163,4 +177,260 @@
 
   padding-top: 16px;
   padding-bottom: 16px;
+}
+
+.form-review__footnote {
+  display: none;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 26px;
+  color: #333333;
+
+  text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .form-review {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    width: 648px;
+  }
+
+  .form-review__fieldset {
+    margin: 0;
+    padding: 0;
+
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-review__fieldset--name::before,
+  .form-review__fieldset--information::before,
+  .form-review__fieldset--assessments::before,
+  .form-review__fieldset--attractions::before,
+  .form-review__fieldset--emotions::before {
+    display: none;
+  }
+
+  .form-review__fieldset--assessments {
+    width: 280px;
+
+    order: 1;
+  }
+
+  .form-review__fieldset--name {
+    width: 280px;
+
+    order: 2;
+  }
+
+  .form-review__fieldset--information {
+    margin-top: 70px;
+
+    order: 3;
+  }
+
+  .form-review__input--telephon,
+  .form-review__input--email {
+    width: 648px;
+  }
+
+  .form-review__legend--icon {
+    width: 100%;
+  }
+
+  .form-review__legend--icon::before {
+    content: "";
+
+    position: absolute;
+    width: 124px;
+    height: 1px;
+    top: 12px;
+    left: 0;
+
+    background-color: #dbdbdb;
+  }
+
+  .form-review__legend--icon::after {
+    content: "";
+
+    position: absolute;
+    width: 124px;
+    height: 1px;
+    top: 12px;
+    right: 0;
+
+    background-color: #dbdbdb;
+  }
+
+  .form-review__fieldset--attractions {
+    width: 648px;
+
+    margin-top: 55px;
+    margin-bottom: 35px;
+
+    order: 4;
+  }
+
+  .form-review__item--checkbox {
+    width: 324px;
+    min-height: 56px;
+
+    padding-left: 175px;
+    margin-bottom: 32px;
+  }
+
+  .form-review__item--checkbox:nth-child(even) {
+    padding-left: 110px;
+  }
+
+  .form-review__legend--position::before,
+  .form-review__legend--position::after {
+    top: 25px;
+  }
+
+  .form-review__fieldset--emotions {
+    flex-direction: row;
+    order: 5;
+  }
+
+  .form-review__textarea {
+    width: 648px;
+    height: 160px;
+  }
+
+  .form-review__legend--emotions {
+    margin-bottom: 60px;
+  }
+
+  .form-review__button {
+    order: 6;
+  }
+
+  .form-review__footnote {
+    display: block;
+
+    order: 7;
+  }
+
+  .form-review__legend {
+    font-size: 21px;
+  }
+
+  .form-review__item--radio {
+    padding-left: 75px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .form-review__item--radio:nth-of-type(3) {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-review {
+    width: 960px;
+  }
+
+  .form-review__item--name {
+    width: 400px;
+  }
+
+  .form-review__input--name {
+    width: 350px;
+  }
+
+  .form-review__input--surname {
+    width: 312px;
+  }
+
+  .form-review__input--patronymic {
+    width: 314px;
+  }
+
+  .form-review__fieldset--assessments {
+    width: 400px;
+  }
+
+  .form-review__item--radio {
+    padding-left: 80px;
+  }
+
+  .form-review__fieldset--information {
+    width: 960px;
+  }
+
+  .form-review__input--telephon,
+  .form-review__input--email {
+    width: 316px;
+
+    margin: 0;
+    margin-left: 15px;
+  }
+
+  .form-review__list--information {
+    justify-content: space-between;
+  }
+
+  .form-review__legend--icon::after {
+    width: 280px;
+  }
+
+  .form-review__legend--icon::before {
+    width: 280px;
+  }
+
+  .form-review__label--none {
+    display: none;
+  }
+
+  .form-review__legend {
+    margin-bottom: 33px;
+  }
+
+  .form-review__legend--information {
+    margin-bottom: 79px;
+  }
+
+  .form-review__fieldset--attractions {
+    width: 960px;
+
+    flex-direction: row;
+  }
+
+  .form-review__list--attractions {
+    justify-content: space-between;
+  }
+
+  .form-review__item--checkbox {
+    width: 210px;
+
+    padding-left: 80px;
+  }
+
+  .form-review__item--checkbox:nth-child(even) {
+    padding-left: 80px;
+  }
+
+  .form-review__fieldset--emotions {
+    width: 960px;
+  }
+
+  .form-review__textarea {
+    width: 960px;
+  }
+
+  .form-review__button {
+    width: 480px;
+  }
 }

@@ -1,10 +1,27 @@
 .list-photo {
-  text-align: center;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .list-photo__item {
   padding: 22px 20px;
-  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+
+.list-photo__box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .list-photo__name {
@@ -23,10 +40,11 @@
 .list-photo__autor {
   font-size: 14px;
   font-weight: normal;
-  line-height: 24px;
   font-style: normal;
-
+  line-height: 24px;
   color: #333333;
+
+  text-align: left;
 }
 
 .list-photo__like {
@@ -35,4 +53,126 @@
   line-height: 24px;
 
   color: #000000;
+}
+
+.list-photo__item--big::before {
+  content: "";
+
+  position: absolute;
+  width: 320px;
+  height: 1px;
+  top: 0;
+  left: 0;
+
+  background-color: #e5e5e5;
+}
+
+.list-photo__item::after {
+  content: "";
+
+  position: absolute;
+  width: 320px;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+
+  background-color: #e5e5e5;
+}
+
+.list-photo__button {
+  margin-right: 5px;
+}
+
+@media (min-width: @tablet-width) {
+  .list-photo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+
+    width: 648px;
+
+    margin: 0 auto;
+  }
+
+  .list-photo__box {
+    background-color: #f2f2f2;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+
+    height: 80px;
+  }
+
+  .list-photo__description {
+    width: 230px;
+
+    padding: 5px;
+    padding-left: 20px;
+
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .list-photo__name {
+    margin: 0;
+  }
+
+  .list-photo__likes {
+    width: 84px;
+
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .list-photo__link {
+    line-height: 0;
+  }
+
+  .list-photo__item {
+    width: 324px;
+
+    padding: 0;
+  }
+
+  .list-photo__item--big {
+    width: 648px;
+  }
+
+  .list-photo__item--big::before,
+  .list-photo__item::after {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .list-photo {
+    width: 1200px;
+  }
+
+  .list-photo__item {
+    width: 400px;
+  }
+
+  .list-photo__item--big {
+    width: 1200px;
+  }
+
+  .list-photo__name,
+  .list-photo__autor,
+  .list-photo__like {
+    color: #ffffff;
+  }
+
+  .list-photo__box {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 }
