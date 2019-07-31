@@ -13,16 +13,18 @@
           <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="page-header__list">
             <li class="page-header__item"><a class="page-header__link page-header__link--top" href="index.html">Главная</a></li>
-            <li class="page-header__item"><a class="page-header__link" href="photo.html">Фото и видео</a></li>
-            <li class="page-header__item"><a class="page-header__link">Форма отзыва</a></li>
+            <li class="page-header__item page-header__item--right"><a class="page-header__link" href="photo.html">Фото и видео</a></li>
+            <li class="page-header__item page-header__item--left"><a class="page-header__link">Форма отзыва</a></li>
             <li class="page-header__item"><a class="page-header__link page-header__link--bottom" href="https://htmlacademy.ru/">Html Academy</a></li>
-            <li class="page-header__item page-header__item--logo"><a href="index.html"><img class="page-header__logo" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона"></a></li>
           </ul>
+          <a class="page-header__logo" href="index.html"><img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона"></a>
         </nav>
         <div class="page-header__intro">
           <div class="page-header__background"></div>
-          <h1 class="page-header__headline">Оставьте свой отзыв</h1>
-          <p class="page-header__paragraph">Помогите нашим отелям стать лучше! оставьте отзыв о них, а&nbsp;также о посещенных вами достопримечательностях</p>
+          <div class="page-header__head">
+            <h1 class="page-header__headline">Оставьте свой отзыв</h1>
+            <p class="page-header__paragraph">Помогите нашим отелям стать лучше! оставьте отзыв о них, а&nbsp;также о посещенных вами достопримечательностях</p>
+          </div>
         </div>
       </div>
     </header>
@@ -32,7 +34,7 @@
         <h2 class="visually-hidden">Форма отправки отзыва</h2>
         <form action="https://echo.htmlacademy.ru" method="get" class="page-main__form-review form-review">
           <fieldset class="form-review__fieldset form-review__fieldset--name">
-            <legend class="form-review__legend">Представьтесь:</legend>
+            <legend class="form-review__legend form-review__legend--name">Представьтесь:</legend>
             <ul class="form-review__list">
               <li  class="form-review__item form-review__item--name">
                 <label class="form-review__label form-review__label--name" for="name">Имя<sup>*</sup>:</label>
@@ -50,13 +52,13 @@
           </fieldset>
 
           <fieldset class="form-review__fieldset form-review__fieldset--information">
-            <legend class="form-review__legend">Контактная информация:</legend>
-            <ul class="form-review__list">
-              <li class="form-review__item">
-                  <label class="form-review__label form-review__label--telephon" for="telephon">Контактный телефон<sup>*</sup>:</label>
+            <legend class="form-review__legend form-review__legend--icon form-review__legend--information">Контактная информация:</legend>
+            <ul class="form-review__list form-review__list--information">
+              <li class="form-review__item form-review__item--information">
+                  <label class="form-review__label form-review__label--telephon" for="telephon"><span class="form-review__label form-review__label--none">Контактный</span> телефон<sup>*</sup>:</label>
                   <input class="form-review__input form-review__input--telephon" type="tel" name="telephon" id="telephon" placeholder="Введите телефон">
               </li>
-              <li class="form-review__item">
+              <li class="form-review__item form-review__item--information">
                   <label class="form-review__label form-review__label--email" for="email">Электронная почта<sup>*</sup>:</label>
                   <input class="form-review__input form-review__input--email" type="email" name="email" id="email" placeholder="Введите e-mail">
               </li>
@@ -82,8 +84,8 @@
           </fieldset>
 
           <fieldset class="form-review__fieldset form-review__fieldset--attractions">
-            <legend class="form-review__legend">Посещенные достопримечательности:</legend>
-            <ul class="form-review__list">
+            <legend class="form-review__legend form-review__legend--icon form-review__legend--position">Посещенные<br>достопримечательности:</legend>
+            <ul class="form-review__list form-review__list--attractions">
               <li class="form-review__item form-review__item--checkbox">
                   <input class="form-review__input form-review__input--checkbox" type="checkbox" name="devil" id="devil">
                   <label class="form-review__label form-review__label--attraction" for="devil">Мост дьявола</label>
@@ -104,10 +106,11 @@
           </fieldset>
 
           <fieldset class="form-review__fieldset form-review__fieldset--emotions">
-            <h2 class="form-review__headline">Опишите свои эмоции:</h2>
+            <legend class="form-review__legend form-review__legend--icon form-review__legend--emotions">Опишите свои эмоции:</legend>
             <textarea class="form-review__textarea" name="text-field" id="text-field" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
           <button class="button form-review__button" type="submit">Отправить отзыв</button>
+          <p class="form-review__footnote"><sup>*</sup> - обязательные поля</p>
         </form>
       </div>
     </main>
@@ -116,7 +119,7 @@
       <div class="page-footer__wrapper">
         <ul class="page-footer__list">
           <li class="page-footer__item"><span class="page-footer__tag">#visitSEDONA</span></li>
-          <li class="page-footer__item">
+          <li class="page-footer__item page-footer__item--margin">
             <ul class="page-footer__socials social">
               <li class="social__item">
                 <a href="#" class="social__link social__link--twitter"><span class="visually-hidden">Twitter</span></a>
@@ -130,7 +133,8 @@
             </ul>
           </li>
           <li class="page-footer__item">
-            <span class="page-footer__copyright">Разработано</span><a class="page-footer__link page-footer__link--icon" href="https://htmlacademy.ru/intensive/adaptive"></a>
+            <span class="page-footer__copyright">Разработано</span><a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path fill="#000000" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
+            </a>
           </li>
         </ul>
       </div>

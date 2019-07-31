@@ -3,6 +3,19 @@
   padding: 0;
 
   list-style: none;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.service-list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding-right: 20px;
+  padding-left: 70px;
+  margin-bottom: 25px;
 }
 
 .list-advantage__service {
@@ -12,7 +25,6 @@
 .service-list__headline {
   margin: 0;
   margin-bottom: 8px;
-  padding: 0 25px;
 
   font-size: 18px;
   line-height: 26px;
@@ -24,26 +36,13 @@
 
 .service-list__paragraph {
   margin: 0;
-  padding: 0 25px;
 
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
   color: #333333;
 
-  text-align: center;
   text-transform: uppercase;
-}
-
-.service-list__headline,
-.service-list__paragraph {
-  text-align: left;
-
-  padding-left: 70px;
-}
-
-.service-list__item {
-  margin-bottom: 25px;
 }
 
 .list-advantage__paragraph--color {
@@ -53,6 +52,11 @@
 @media (min-width: @tablet-width) {
   .service-list {
     display: flex;
+    flex-direction: row;
+  }
+
+  .list-advantage__item--height {
+    height: 330px;
   }
 
   .service-list__item {
@@ -60,9 +64,11 @@
 
     display: flex;
     flex-direction: column;
+    align-items: center;
 
-    padding: 0 45px;
-    margin-bottom: 60px;
+    padding-left: 45px;
+    padding-right: 45px;
+    margin: 0;
   }
 
   .service-list__headline {
@@ -77,6 +83,27 @@
   }
 
   .list-advantage__service {
-    padding-top: 160px;
+    padding-top: 130px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .service-list__item {
+    margin-bottom: 85px;
+  }
+
+  .service-list__item--house {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .service-list__item--food {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+
+  .service-list__item--present {
+    padding-left: 90px;
+    padding-right: 90px;
   }
 }
