@@ -49,6 +49,7 @@
   color: #000000;
 
   text-transform: uppercase;
+  align-self: center;
 }
 
 .page-footer__link {
@@ -56,6 +57,15 @@
   height: 34px;
 
   padding-left: 11px;
+}
+
+.page-footer__link:hover path {
+  fill: #81b3d2;
+}
+
+.page-footer__link:focus path,
+.page-footer__link:active path {
+  fill: #b2b2b2;
 }
 
 @media (min-width: @tablet-width) {

@@ -19,6 +19,15 @@
   margin-right: 6px;
 }
 
+.social__link:hover {
+  background-color: #669ec0;
+}
+
+.social__link:focus,
+.social__link:active {
+  background-color: #5496bd;
+}
+
 .social__link--twitter::before {
   content: "";
   position: absolute;
@@ -53,4 +62,13 @@
 
   background-image: url("../img/icon-youtube.svg");
   background-repeat: no-repeat;
+}
+
+.social__link--twitter:focus::before,
+.social__link--twitter:active::before,
+.social__link--facebook:focus::before,
+.social__link--facebook:active::before,
+.social__link--youtube:focus::before,
+.social__link--youtube:active::before {
+  opacity: 0.3;
 }
