@@ -32,10 +32,12 @@
           </a>
         </div>
         <div class="page-header__intro">
-          <div class="page-header__background"></div>
+          <div class="page-header__background page-header__background--triangle page-header__background--size">
+            <img class="page-header__text page-header__text--small" src="img/text-sedona.svg" width="458" height="78" alt="Городок Седона">
+          </div>
           <div class="page-header__head">
-              <h1 class="page-header__headline">Оставьте свой отзыв</h1>
-              <p class="page-header__paragraph">Помогите нашим отелям стать лучше! оставьте отзыв о них, а&nbsp;также о посещенных вами достопримечательностях</p>
+            <h1 class="page-header__headline">Оставьте свой отзыв</h1>
+            <p class="page-header__paragraph">Помогите нашим отелям стать лучше! оставьте отзыв о них, а&nbsp;также о посещенных вами достопримечательностях</p>
           </div>
         </div>
       </div>
@@ -171,14 +173,14 @@
         });
       </script>
 
-    <section class="pop-up">
+    <section class="pop-up pop-up__error">
       <h2 class="visually-hidden">Ошибка ввода полей формы</h2>
-      <span class="pop-up__headline">Что-то пошло не так!</span>
+      <span class="pop-up__headline">Что-то пошло не&nbspтак!</span>
       <p class="pop-up__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <button class="button pop-up__button">Ок</button>
+      <button class="button pop-up__button pop-up__button--error">Ок</button>
     </section>
 
-    <section class="pop-up">
+    <section class="pop-up pop-up__send">
       <h2 class="visually-hidden">Отзыв отправлен</h2>
       <span class="pop-up__headline">Ваш отзыв отправлен!</span>
       <p class="pop-up__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
