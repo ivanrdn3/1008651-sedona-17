@@ -71,10 +71,12 @@
 
   text-align: left;
   text-transform: uppercase;
+
+  position: relative;
 }
 
 .form-review__input {
-  padding-left: 23px;
+  padding: 0 20px;
 
   font-size: 18px;
   font-weight: bold;
@@ -116,18 +118,10 @@
   margin-bottom: 20px;
 }
 
-.form-review__input--telephon,
-.form-review__input--email {
-  width: 280px;
-  height: 58px;
-}
-
-.form-review__input--telephon {
-  margin-bottom: 20px;
-}
-
 .form-review__item--radio,
 .form-review__item--checkbox {
+  position: relative;
+
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 79px;
@@ -151,7 +145,7 @@
 
 .form-review__textarea {
   width: 279px;
-  min-height: 160px;
+  height: 160px;
 
   font-size: 18px;
   font-weight: bold;
@@ -163,12 +157,33 @@
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 18px;
+  padding-bottom: 18px;
   margin-bottom: 51px;
+
+  resize: none;
 }
 
 .form-review__textarea::placeholder {
   color: #000000;
 }
+
+.form-review__textarea:hover {
+  background-color: #e5e5e5;
+}
+
+.form-review__textarea:focus,
+.form-review__textarea:active {
+  background-color: #ffffff;
+  border: 4px solid #e5e5e5;
+
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  outline: none;
+}
+
 
 .form-review__button {
   width: 280px;
@@ -187,6 +202,148 @@
   color: #333333;
 
   text-transform: uppercase;
+}
+
+.form-review__input:hover {
+  background-color: #e5e5e5;
+}
+
+.form-review__input:focus,
+.form-review__input:active {
+  background-color: #ffffff;
+  background-position: 239px 50%;
+
+  border-width: 4px;
+  border-color: #e5e5e5;
+  border-style: solid;
+
+  padding: 0 16px;
+
+  outline: none;
+}
+
+/* styles input radio */
+
+.form-review__item--radio {
+  margin-bottom: 13px;
+}
+
+.form-review__label--assessment::before {
+  position: absolute;
+  content: "";
+  width: 56px;
+  height: 56px;
+  top: -17px;
+  left: -79px;
+  background-color: #f2f2f2;
+  background-position: 0 0;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+}
+
+.form-review__label--assessment:hover::before {
+  background-color: #e5e5e5;
+}
+
+.form-review__label--assessment:focus::before,
+.form-review__label--assessment:active::before {
+  background-color: #d5d5d5;
+}
+
+.form-review__input--radio:checked + .form-review__label--assessment::after {
+  position: absolute;
+  content: "";
+  width: 22px;
+  height: 22px;
+  top: 0;
+  left: -62px;
+  background-color: #333333;
+  background-position: 0 0;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+}
+
+.form-review__input--radio:checked + .form-review__label--assessment:focus::after,
+.form-review__input--radio:checked + .form-review__label--assessment:active::after {
+  background-color: #a4a4a4;
+}
+
+/* styles input checkbox */
+
+.form-review__item--checkbox {
+  margin-bottom: 24px;
+}
+
+.form-review__label--attraction::before {
+  position: absolute;
+  content: "";
+  width: 56px;
+  height: 56px;
+  top: -17px;
+  left: -79px;
+  background-color: #f2f2f2;
+  background-position: 0 0;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+}
+
+.form-review__label--attraction:hover::before {
+  background-color: #e5e5e5;
+}
+
+.form-review__label--attraction:focus::before,
+.form-review__label--attraction:active::before {
+  background-color: #d5d5d5;
+}
+
+.form-review__input--checkbox:checked + .form-review__label--attraction::after {
+  position: absolute;
+  content: "";
+  width: 28px;
+  height: 20px;
+  top: 0;
+  left: -64px;
+  background-image: url("../img/icon-tick.svg");
+  background-position: 50% 50%;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+}
+
+.form-review__input--checkbox:checked + .form-review__label--attraction:focus::after,
+.form-review__input--checkbox:checked + .form-review__label--attraction:active::after {
+  background-image: url("../img/icon-tick-disabled.svg");
+}
+
+.form-review__button:hover {
+  background-color: #669ec0;
+}
+
+.form-review__button:focus,
+.form-review__button:active {
+  color: #94b9d2;
+  background-color: #5496bd;
+}
+
+.form-review__input--telephon,
+.form-review__input--email {
+  width: 280px;
+  height: 58px;
+
+  padding-right: 58px;
+
+  background-repeat: no-repeat;
+  background-position: 243px 50%;
+  background-size: 18px 18px;
+}
+
+.form-review__input--telephon {
+  margin-bottom: 20px;
+
+  background-image: url("../img/icon-phone.svg");
+}
+
+.form-review__input--email {
+  background-image: url("../img/icon-mail.svg");
 }
 
 @media (min-width: @tablet-width) {
@@ -227,6 +384,20 @@
     order: 2;
   }
 
+  .form-review__fieldset--name::after {
+    content: "";
+
+    position: absolute;
+
+    width: 1px;
+    height: 292px;
+
+    top: 0;
+    left: -56px;
+
+    background-color: #dbdbdb;
+  }
+
   .form-review__fieldset--information {
     margin-top: 70px;
 
@@ -236,6 +407,8 @@
   .form-review__input--telephon,
   .form-review__input--email {
     width: 648px;
+
+    background-position: 611px 50%;
   }
 
   .form-review__legend--icon {
@@ -335,6 +508,13 @@
   .form-review__item--radio:nth-of-type(3) {
     margin-bottom: 0;
   }
+
+  .form-review__input--telephon:focus,
+  .form-review__input--telephon:active,
+  .form-review__input--email:focus,
+  .form-review__input--email:active {
+    background-position: 607px 50%;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -376,6 +556,8 @@
 
     margin: 0;
     margin-left: 15px;
+
+    background-position: 278px 50%;
   }
 
   .form-review__list--information {
@@ -432,5 +614,12 @@
 
   .form-review__button {
     width: 480px;
+  }
+
+  .form-review__input--telephon:focus,
+  .form-review__input--telephon:active,
+  .form-review__input--email:focus,
+  .form-review__input--email:active {
+    background-position: 274px 50%;
   }
 }
