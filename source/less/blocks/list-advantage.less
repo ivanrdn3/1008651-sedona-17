@@ -1,13 +1,15 @@
 .list-advantage {
   margin: 0;
+  margin-top: 5px;
   padding: 0;
 
   list-style: none;
 }
 
 .list-advantage__wrapper {
-  padding: 20px 45px;
+  padding: 20px 20px;
   padding-top: 70px;
+  padding-bottom: 40px;
 
   color: #ffffff;
 
@@ -22,7 +24,7 @@
   width: 100%;
   height: 37px;
 
-  top: 0;
+  top: -5px;
   left: 0;
 
   background-image: url("../img/bg-triangle.svg");
@@ -37,7 +39,7 @@
 .list-advantage__item--background {
   background-color: #eeeeee;
 
-  padding: 25px;
+  padding: 26px 35px;
 }
 
 .list-advantage__headline {
@@ -63,7 +65,8 @@
 }
 
 .list-advantage__paragraph--margin {
-  margin: 10px 0;
+  margin: 9px 0;
+  margin-bottom: 16px;
 }
 
 .list-advantage__item {
@@ -74,6 +77,8 @@
 
 .list-advantage__item--border {
   position: relative;
+
+  padding-bottom: 29px;
 }
 
 .list-advantage__item--border::before {
@@ -107,6 +112,10 @@
   height: 260px;
 }
 
+.list-advantage__wrapper--order {
+  padding-top: 38px;
+}
+
 @media (min-width: @tablet-width) {
   .list-advantage {
     display: flex;
@@ -120,7 +129,7 @@
 
   .list-advantage__item {
     width: 768px;
-    height: 256px;
+    min-height: 256px;
 
     flex-direction: row;
     align-items: center;
@@ -129,7 +138,7 @@
   .list-advantage__wrapper {
     width: 256px;
 
-    padding: 20px 50px;
+    padding: 20px 43px;
   }
 
   .list-advantage__box {
@@ -164,8 +173,8 @@
 
     width: 256px;
 
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 49px;
+    padding-right: 49px;
   }
 
   .list-advantage__item--border::before,
@@ -181,6 +190,11 @@
   .list-advantage__wrapper--triangle::before {
     display: none;
   }
+
+  .list-advantage__paragraph--margin {
+    margin-top: 10px;
+    margin-bottom: 22px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -190,6 +204,22 @@
 
   .list-advantage__item {
     width: 1200px;
+  }
+
+  .page-main__list {
+    margin-top: 20px;
+  }
+
+  .list-advantage__headline--br {
+    width: 150px;
+
+    margin: 0 auto;
+  }
+
+  .list-advantage__headline--background {
+    width: 130px;
+
+    margin-top: -20px;
   }
 
   .list-advantage__image {
@@ -205,13 +235,19 @@
   }
 
   .list-advantage__wrapper {
-    padding: 20px 65px;
+    padding: 55px 65px;
+    padding-top: 45px;
 
     width: 400px;
   }
 
   .list-advantage__wrapper--order {
-    padding: 20px 90px;
+    padding: 20px 80px;
+    padding-top: 15px;
+  }
+
+  .list-advantage__paragraph--margin {
+    margin-bottom: 20px;
   }
 
   .list-advantage__box {
@@ -222,5 +258,9 @@
 
   .list-advantage__item--background {
     width: 400px;
+  }
+
+  .list-advantage__paragraph--color {
+    width: 287px;
   }
 }
