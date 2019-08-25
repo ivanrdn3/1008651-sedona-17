@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-mini.css">
     <title>HTML Academy: Седона</title>
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__wrapper">
+      <div class="page-header__wrapper page-header__wrapper--margin">
         <nav class="page-header__nav page-header__nav--closed page-header__nav--nojs">
           <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <div class="page-header__wrap">
@@ -35,8 +35,8 @@
           <div class="page-header__background page-header__background--triangle page-header__background--size">
             <img class="page-header__text page-header__text--small" src="img/text-sedona.svg" width="458" height="78" alt="Городок Седона">
           </div>
-          <div class="page-header__head">
-            <h1 class="page-header__headline">Оставьте свой отзыв</h1>
+          <div class="page-header__head page-header__head--padding">
+            <h1 class="page-header__headline page-header__headline--font">Оставьте свой отзыв</h1>
             <p class="page-header__paragraph">Помогите нашим отелям стать лучше! оставьте отзыв о них, а&nbsp;также о посещенных вами достопримечательностях</p>
           </div>
         </div>
@@ -49,7 +49,7 @@
         <form action="https://echo.htmlacademy.ru" method="get" class="page-main__form-review form-review">
           <fieldset class="form-review__fieldset form-review__fieldset--name">
             <legend class="form-review__legend form-review__legend--name">Представьтесь:</legend>
-            <ul class="form-review__list">
+            <ul class="form-review__list form-review__list--name">
               <li  class="form-review__item form-review__item--name">
                 <label class="form-review__label form-review__label--name" for="name">Имя<sup>*</sup>:</label>
                 <input class="form-review__input form-review__input--name" type="text" name="name" id="name" placeholder="Петр">
@@ -80,8 +80,8 @@
           </fieldset>
 
           <fieldset class="form-review__fieldset form-review__fieldset--assessments">
-            <legend class="form-review__legend">Ваше общее впечатление:</legend>
-            <ul class="form-review__list">
+            <legend class="form-review__legend form-review__legend--assessments">Ваше общее впечатление:</legend>
+            <ul class="form-review__list form-review__list--assessments">
               <li class="form-review__item form-review__item--radio">
                 <input class="form-review__input form-review__input--radio" type="radio" name="assessment" id="assessment-plus" checked>
                 <label class="form-review__label form-review__label--assessment" for="assessment-plus">Скорее положительное</label>
@@ -102,7 +102,7 @@
             <ul class="form-review__list form-review__list--attractions">
               <li class="form-review__item form-review__item--checkbox">
                   <input class="form-review__input form-review__input--checkbox" type="checkbox" name="devil" id="devil" checked>
-                  <label class="form-review__label form-review__label--attraction" for="devil">Мост дьявола</label>
+                  <label class="form-review__label form-review__label--attraction" for="devil">Мост Дьявола</label>
               </li>
               <li class="form-review__item form-review__item--checkbox">
                   <input class="form-review__input form-review__input--checkbox" type="checkbox" name="bell" id="bell" checked>
@@ -156,22 +156,7 @@
       </div>
     </footer>
 
-    <script>
-        var navMain = document.querySelector(".page-header__nav");
-        var navToggle = document.querySelector(".page-header__toggle");
-
-        navMain.classList.remove("page-header__nav--nojs");
-
-        navToggle.addEventListener("click", function() {
-          if (navMain.classList.contains("page-header__nav--closed")) {
-            navMain.classList.remove("page-header__nav--closed");
-            navMain.classList.add("page-header__nav--opened");
-          } else {
-            navMain.classList.add("page-header__nav--closed");
-            navMain.classList.remove("page-header__nav--opened");
-          }
-        });
-      </script>
+    <script src="js/js-mini.js"></script>
 
     <section class="pop-up pop-up__error">
       <h2 class="visually-hidden">Ошибка ввода полей формы</h2>

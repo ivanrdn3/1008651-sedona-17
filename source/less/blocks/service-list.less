@@ -15,18 +15,19 @@
 
   padding-right: 20px;
   padding-left: 70px;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
 
   position: relative;
 }
 
 .list-advantage__service {
-  padding-top: 33px;
+  padding-top: 35px;
+  padding-bottom: 10px;
 }
 
 .service-list__headline {
   margin: 0;
-  margin-bottom: 8px;
+  margin-bottom: 15px;
 
   font-size: 18px;
   line-height: 26px;
@@ -60,7 +61,7 @@
   height: 38px;
 
   top: -10px;
-  left: 20px;
+  left: 27px;
 
   background-image: url("../img/icon-gift-small.svg");
   background-repeat: no-repeat;
@@ -74,8 +75,8 @@
   width: 39px;
   height: 37px;
 
-  top: -10px;
-  left: 17px;
+  top: -8px;
+  left: 21px;
 
   background-image: url("../img/icon-house-small.svg");
   background-repeat: no-repeat;
@@ -89,8 +90,8 @@
   width: 40px;
   height: 35px;
 
-  top: -6px;
-  left: 16px;
+  top: -4px;
+  left: 19px;
 
   background-image: url("../img/icon-burger-small.svg");
   background-repeat: no-repeat;
@@ -107,7 +108,7 @@
   }
 
   .service-list__item {
-    width: 33.33%;
+    width: 256px;
 
     display: flex;
     flex-direction: column;
@@ -120,6 +121,8 @@
 
   .service-list__headline {
     font-size: 21px;
+
+    margin-bottom: 20px;
   }
 
   .service-list__headline,
@@ -130,7 +133,7 @@
   }
 
   .list-advantage__service {
-    padding-top: 130px;
+    padding-top: 106px;
   }
 
   .service-list__item--present::before {
@@ -166,7 +169,13 @@
 
 @media (min-width: @desktop-width) {
   .service-list__item {
+    width: 400px;
+
     margin-bottom: 85px;
+  }
+
+  .list-advantage__service {
+    padding-top: 175px;
   }
 
   .service-list__item--house {
@@ -194,5 +203,15 @@
 
   .service-list__item--food::before {
     left: 161px;
+  }
+
+  .service-list__paragraph {
+    width: 300px;
+
+    margin-top: 0;
+  }
+
+  .service-list__paragraph--size {
+    width: 220px;
   }
 }

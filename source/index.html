@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-mini.css">
     <title>HTML Academy: Седона</title>
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__wrapper">
+      <div class="page-header__wrapper page-header__wrapper--main">
         <nav class="page-header__nav page-header__nav--closed page-header__nav--nojs">
           <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <div class="page-header__wrap">
@@ -33,9 +33,9 @@
         </div>
         <div class="page-header__intro">
           <div class="page-header__background page-header__background--triangle">
-            <img class="page-header__text" src="img/text-sedona-index.svg" width="460" height="350" alt="Городок Седона">
+            <img class="page-header__text page-header__text--main" src="img/text-sedona-index.svg" width="460" height="350" alt="Городок Седона">
           </div>
-          <div class="page-header__head">
+          <div class="page-header__head page-header__head--main">
             <h1 class="page-header__headline">СЕДОНА — небольшой городок в Аризоне, заслуживающий большего!</h1>
             <p class="page-header__paragraph">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
           </div>
@@ -49,7 +49,7 @@
         <ul class="page-main__list list-advantage">
           <li class="list-advantage__item list-advantage__item--color">
             <div class="list-advantage__wrapper list-advantage__wrapper--triangle">
-              <h2 class="list-advantage__headline">Настоящий городок</h2>
+              <h2 class="list-advantage__headline list-advantage__headline--br">Настоящий городок</h2>
               <p class="list-advantage__paragraph list-advantage__paragraph--margin">— №1 —</p>
               <p class="list-advantage__paragraph">Седона не аттракцион для туристов, там течет своя жизнь</p>
             </div>
@@ -71,7 +71,7 @@
               </li>
               <li class="service-list__item service-list__item--present">
                 <h2 class="service-list__headline">Сувениры</h2>
-                <p class="service-list__paragraph">Не только китайского, но и местного производства!</p>
+                <p class="service-list__paragraph service-list__paragraph--size">Не только китайского, но&nbsp;и местного производства!</p>
               </li>
               <li class="service-list__item service-list__item--food">
                 <h2 class="service-list__headline">Еда</h2>
@@ -81,9 +81,9 @@
           </li>
           <li class="list-advantage__item list-advantage__item--color">
             <div class="list-advantage__wrapper list-advantage__wrapper--order">
-              <h2 class="list-advantage__headline">Там есть мост дьявола</h2>
+              <h2 class="list-advantage__headline">Там есть мост&nbsp;дьявола</h2>
               <p class="list-advantage__paragraph list-advantage__paragraph--margin">— №2 —</p>
-              <p class="list-advantage__paragraph">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+              <p class="list-advantage__paragraph">Да, по нему можно пройти! Если&nbsp;вы осмелитесь, конечно</p>
             </div>
             <div class="list-advantage__box">
               <picture>
@@ -95,18 +95,17 @@
             </div>
           </li>
           <li class="list-advantage__item list-advantage__item--background">
-
-            <h2 class="list-advantage__headline">Небольшая площадь</h2>
+            <h2 class="list-advantage__headline list-advantage__headline--background">Небольшая площадь</h2>
             <p class="list-advantage__paragraph list-advantage__paragraph--color list-advantage__paragraph--margin">— №3 —</p>
             <p class="list-advantage__paragraph list-advantage__paragraph--color">Все интересные места находятся очень близко</p>
           </li>
           <li class="list-advantage__item list-advantage__item--background list-advantage__item--border">
-            <h2 class="list-advantage__headline">Красивая дорога</h2>
+            <h2 class="list-advantage__headline list-advantage__headline--background">Красивая дорога</h2>
             <p class="list-advantage__paragraph list-advantage__paragraph--color list-advantage__paragraph--margin">— №4 —</p>
-            <p class="list-advantage__paragraph list-advantage__paragraph--color">Ехать в Седону из Лас-Вегаса совсем не&nbsp;nскучно!</p>
+            <p class="list-advantage__paragraph list-advantage__paragraph--color">Ехать в Седону из Лас-Вегаса совсем не&nbsp;скучно!</p>
           </li>
           <li class="list-advantage__item list-advantage__item--background">
-            <h2 class="list-advantage__headline">Мало туристов</h2>
+            <h2 class="list-advantage__headline list-advantage__headline--background">Мало туристов</h2>
             <p class="list-advantage__paragraph list-advantage__paragraph--color list-advantage__paragraph--margin">— №5 —</p>
             <p class="list-advantage__paragraph list-advantage__paragraph--color">Большинство едет в гранд каньон и толпится там</p>
           </li>
@@ -114,7 +113,7 @@
         <div class="page-main__hostel hostel">
           <h2 class="visually-hidden">Выбор гостиницы</h2>
           <span class="hostel__headline">ЗАИНТЕРЕСОВАЛИСЬ?</span>
-          <p class="hostel__paragraph">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+          <p class="hostel__paragraph">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения гостиниц в седоне</p>
           <a href="#" class="button hostel__button">Найти гостиницу</a>
         </div>
         <div class="page-main__map map">
@@ -155,21 +154,6 @@
       </div>
     </footer>
 
-    <script>
-        var navMain = document.querySelector(".page-header__nav");
-        var navToggle = document.querySelector(".page-header__toggle");
-
-        navMain.classList.remove("page-header__nav--nojs");
-
-        navToggle.addEventListener("click", function() {
-          if (navMain.classList.contains("page-header__nav--closed")) {
-            navMain.classList.remove("page-header__nav--closed");
-            navMain.classList.add("page-header__nav--opened");
-          } else {
-            navMain.classList.add("page-header__nav--closed");
-            navMain.classList.remove("page-header__nav--opened");
-          }
-        });
-      </script>
+    <script src="js/js-mini.js"></script>
   </body>
 </html>
